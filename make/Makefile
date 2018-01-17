@@ -1,8 +1,8 @@
 
-test:  anotherTest.o  test.o
+test:  another  test.o
 	gcc -Wall test.o anotherTest.o -o test
 
-anotherTest.o: anotherTest.c 
+another: anotherTest.c 
 	gcc -c -Wall anotherTest.c 
 
 test.o: test.c 
