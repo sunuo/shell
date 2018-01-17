@@ -1,0 +1,10 @@
+f0:f01 f02
+	echo f0
+f01:f011 f012
+	echo f01
+f02:
+	echo f02
+f011:
+	echo f011
+f012:
+	echo f012
