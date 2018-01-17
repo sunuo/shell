@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QYCast"
-  s.version      = ""
+  s.version      = "8.9.10.33"
 
   s.summary      = "QYCast"
 
