@@ -1,12 +1,5 @@
-
-test:  another.o  test.o
-	gcc -Wall test.o another.o -o test
-
-another.o: anotherTest.c 
-	gcc -c -Wall anotherTest.c -o another.o 
-
-test.o: test.c 
-	gcc -c -Wall test.c 
+test:   anotherTest.o test.o 
+	cc -Wall test.o anotherTest.o -o test
 
 clean: 
 	rm -rf *.o test
