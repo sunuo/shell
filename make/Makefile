@@ -1,6 +1,6 @@
-include submake
-test:   anotherTest.o test.o
+test:   anotherTest.o DoMe test.o
 	cc -Wall test.o anotherTest.o -o test
 test.o: test.h
-clean: 
+include subMake
+clean:
 	rm -rf *.o test
