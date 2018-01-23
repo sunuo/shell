@@ -1,9 +1,12 @@
-test:   anotherTest.o DoMe test.o foo.o
-	cc -Wall test.o anotherTest.o -o test
+VPATH = ./subdir
+test:   anotherTest.o DoMe foo.o test.o
+	cc -Wall -Lsubdir test.o anotherTest.o -lfoo.o -o test
 test.o: test.h
+	cc -c -Isubdir test.c -o test.o
 include subMake
 foo.o:
-	cd subdir&&$(make)
-	echo $(make)
+	echo 'start make foo'
+	cd subdir&&$(MAKE)
+	echo $(VPATH)
 clean:
 	rm -rf *.o test
